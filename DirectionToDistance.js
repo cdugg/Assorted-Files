@@ -4,7 +4,7 @@ If the point of intersection lies behind the starting position ie in the wrong d
 direction instead of returning a distance.*/
 
 function intersect(dir, current, point){
-	var slope = Math.tan((90 - parseFloat(direction)) * Math.PI/180)
+	var slope = Math.tan(dir * Math.PI/180)
 	var perpSlope = -1/slope
 	var line1EndX, line1EndY, line2EndX, line2EndY;
 	var line1StartX = current[0];
@@ -80,7 +80,7 @@ function intersect(dir, current, point){
     intersection[0] = line1StartX + (a * (line1EndX - line1StartX));
     intersection[1] = line1StartY + (a * (line1EndY - line1StartY));
 
-    if(direction < 180 && intersection[0] < line1StartX || direction > 180 && intersection[0] > line1StartX){
+    if(dir < 180 && intersection[0] < line1StartX || dir > 180 && intersection[0] > line1StartX){
     	return "Wrong Direction"
     }
 
