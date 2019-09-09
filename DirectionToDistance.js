@@ -4,7 +4,7 @@ If the point of intersection lies behind the starting position ie in the wrong d
 direction instead of returning a distance.*/
 
 function intersect(dir, current, point){
-	var slope = Math.tan(dir * Math.PI/180)
+	var slope = Math.tan((90 - dir) % 360 * Math.PI/180)
 	var perpSlope = -1/slope
 	var line1EndX, line1EndY, line2EndX, line2EndY;
 	var line1StartX = current[0];
@@ -14,7 +14,7 @@ function intersect(dir, current, point){
 
 	//edge cases
 	if(dir == 180){
-		line1EndY = -10
+		line1EndY = 180
 		if(line1StartY >= line2StartY){
 			return distance(point, [line1StartX, line2StartY])
 		}
@@ -23,7 +23,7 @@ function intersect(dir, current, point){
 		}
 	}
 	else if(dir == 0 || dir == 360){
-		line1EndY = 10
+		line1EndY = -180
 		if(line1StartY <= line2StartY){
 			return distance(point, [line1StartX, line2StartY])
 		}
@@ -32,7 +32,7 @@ function intersect(dir, current, point){
 		}
 	}
 	else if(dir == 90){
-		line1EndX = 10
+		line1EndX = 180
 		if(line1StartX <= line2StartX){
 			return distance(point, [line2StartX, line1StartY])
 		}
@@ -41,7 +41,7 @@ function intersect(dir, current, point){
 		}
 	}
 	else if(dir == 270){
-		line1EndX = -10
+		line1EndX = -180
 		if(line1StartX >= line2StartX){
 			return distance(point, [line2StartX, line1StartY])
 		}
@@ -52,21 +52,21 @@ function intersect(dir, current, point){
 
 	//typical cases line 1 ends
 	else if(dir < 180){
-		line1EndX = 10
+		line1EndX = 180
 		line1EndY = slope * (line1EndX - line1StartX) + line1StartY
 	}
 	else if (dir > 180){
-		line1EndX = -10
+		line1EndX = -180
 		line1EndY = slope * (line1EndX - line1StartX) + line1StartY
 	}
 
 	//typical cases line 2 ends
 	if(line2StartY > (slope * (line2StartX - line1StartX) + line1StartY) && slope > 0 || line2StartY < (slope * (line2StartX - line1StartX) + line1StartY) && slope < 0){
-		line2EndX = 10
+		line2EndX = 180
 		line2EndY = perpSlope * (line2EndX - line2StartX) + line2StartY
 	}
 	else if(line2StartY < (slope * (line2StartX - line1StartX) + line1StartY) && slope > 0 || line2StartY > (slope * (line2StartX - line1StartX) + line1StartY) && slope < 0){
-		line2EndX = -10
+		line2EndX = -180
 		line2EndY = perpSlope * (line2EndX - line2StartX) + line2StartY
 	}
 
@@ -79,7 +79,9 @@ function intersect(dir, current, point){
     a = numerator1 / denominator;
     intersection[0] = line1StartX + (a * (line1EndX - line1StartX));
     intersection[1] = line1StartY + (a * (line1EndY - line1StartY));
-
+    //console.log(slope, perpSlope)
+    console.log("Start: " + line1StartX + ", " + line1StartY + "\nSlope: " + slope + "\nEnd: " + line1EndX + ", " + line1EndY + "\nIntersection X: " + intersection)
+    //reduce so only returns if 45 degrees to either side
     if(dir < 180 && intersection[0] < line1StartX || dir > 180 && intersection[0] > line1StartX){
     	return "Wrong Direction"
     }
