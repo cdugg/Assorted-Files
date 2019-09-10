@@ -9,8 +9,6 @@ leaflet-src.esm.js
 
 leaflet-src.js
 
-lodash.js ? idk if thats actually used cant remember
-
 three.js
 
 # Base folder
