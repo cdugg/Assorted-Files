@@ -23,3 +23,7 @@ leaflet-src.js.map
 
 # Images
 Nonplaceholders for all mappings
+
+
+
+Map style currently not being used but makes map tiles a greyscale style
