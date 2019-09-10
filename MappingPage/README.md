@@ -1,3 +1,6 @@
+Note:
+This is all my first attempt at using JavaScript which is not something I have ever been taught.
+
 Other files needed:
 
 # js folder
