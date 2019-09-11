@@ -41,3 +41,8 @@ Use Map style file to style tiles instead of using mapbox
 Optimization
 
 Make script.js much more legible
+
+# Other Ideas for Improvement
+Create 3d environment with movable camera and interactive features ie selectable buildings or map features that provide further detail on the selected item. For simple sample see:
+
+https://www.creativebloq.com/how-to/create-interactive-3d-visuals-with-threejs
