@@ -1,31 +1,13 @@
 Note:
+
 This is all my first attempt at using JavaScript which is not something I have ever been taught.
 
 Other files needed:
 
-# js folder
-jquery.js
-
-leaflet.js
-
-leaflet-src.esm.js
-
-leaflet-src.js
-
-three.js
-
-# Base folder
-leaflet.css
-
-# CSS folder
-leaflet.js.map
-
-leaflet-src.esm.ja.map
-
-leaflet-src.js.map
-
 # Images
 Nonplaceholders for all mappings
+
+(placeholders only available for nodes A-G check piclocs.png for locations on loaded map to test)
 
 ---------------------------------------------
 
