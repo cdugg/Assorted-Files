@@ -27,6 +27,17 @@ leaflet-src.js.map
 # Images
 Nonplaceholders for all mappings
 
-
+---------------------------------------------
 
 Map style currently not being used but makes map tiles a greyscale style
+
+Current map style uses mapbox
+
+# Intended Improvements
+Download map tiles and host locally to avoid using mapbox
+
+Use Map style file to style tiles instead of using mapbox
+
+Optimization
+
+Make script.js much more legible
