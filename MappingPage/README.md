@@ -2,6 +2,14 @@ Note:
 
 This is all my first attempt at using JavaScript which is not something I have ever been taught.
 
+ISSUE:
+
+Must use as a hosted site. Street view will not work for local testing. easy solutions:
+
+- in python2 navigate to folder and type python -m SimpleHTTPServer
+
+- in python3 navigate to folder and type python -m http.server
+
 Other files needed:
 
 # Images
