@@ -195,7 +195,7 @@ position.on('dragend', function (e) {
 			renderer.render(scene, camera);			
 		}
 		
-		function onDocumentScroll(event){
+		function onDocumentScroll(event){ //works in chrome but not MS edge
 			if(count == 0){
 				count ++;
 				//if scroll up zoom in if scroll down zoom out
