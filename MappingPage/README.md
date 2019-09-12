@@ -1,6 +1,6 @@
 Note:
 
-This is all my first attempt at using JavaScript which is not something I have ever been taught.
+This is all my first attempt at using JavaScript which is not something I have ever been taught. Leaflet and three.js are not my work.
 
 ISSUE:
 
