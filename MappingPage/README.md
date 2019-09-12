@@ -6,9 +6,9 @@ ISSUE:
 
 Must use as a hosted site. Street view will not work for local testing. easy solutions:
 
-- in python2 navigate to folder and type python -m SimpleHTTPServer
+- in python2 navigate to folder and type python -m SimpleHTTPServer then open localhost:8000
 
-- in python3 navigate to folder and type python -m http.server
+- in python3 navigate to folder and type python -m http.server then open localhost:8000
 
 Other files needed:
 
