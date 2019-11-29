@@ -169,7 +169,7 @@ position.on('dragend', function (e) {
 		// creation of the sphere material
 		var sphereMaterial = new THREE.MeshBasicMaterial();
 		var loader = new THREE.TextureLoader();
-		sphereMaterial.map = loader.load(panoramasArray[panoramaNumber])
+		sphereMaterial.map = loader.load(panoramasArray[0])
 
 		// geometry + material = mesh (actual object)
 		var sphereMesh = new THREE.Mesh(sphere, sphereMaterial);
