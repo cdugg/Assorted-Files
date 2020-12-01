@@ -15,7 +15,7 @@ function addMovie(){
 		var link = x.value;
 		//https://www.imdb.com/title/tt4154796/
 		console.log(link);
-		//TODO assert that link is imdb
+
 
 		var movies = document.getElementById("movies");
 

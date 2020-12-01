@@ -18,6 +18,12 @@
   	},
   	"default_popup": "popup.html"
   },
+  "content_scripts": [ 
+    { 
+      "js": [ "jquery.min.js", "background.js" ],
+      "matches": [ "http://*/*", "https://*/*"]
+    }
+  ], 
   "author": "Cormac and Dearbhla",
   "background": {
   	"scripts": ["background.js"],
@@ -25,7 +31,6 @@
   },
   "commands": {},
   "incognito": "split",
-  "options_page": "options.html",
   "permissions": [
     "activeTab",
     "declarativeContent",
