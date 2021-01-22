@@ -1,3 +1,5 @@
+**On Hold for School**
+
 Hello this is what I'm working on right now in spare time.
 
 The goal is to make a webpage where higher dimensional chess can be explained for the general public, visualized, and played for a limited amount of dimensions.
